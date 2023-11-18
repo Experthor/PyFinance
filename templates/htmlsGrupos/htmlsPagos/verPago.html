@@ -1,0 +1,42 @@
+<!--<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pagos</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+    <link rel="manifest" href="/assets/img/site.webmanifest">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <h1>Lista de Pagos</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID del Pago</th>
+                <th>Nombre del Pago</th>
+                <th>Fecha de Pago</th>
+                <th>Fecha de Creación</th>
+                <th>Progreso de Pago</th>
+                <th>Cantidad a Pagar</th>
+                <th>Estatus</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pago in pagos %}
+            <tr>
+                <td>{{ pago.Id_pago }}</td>
+                <td>{{ pago.Nombre_pago }}</td>
+                <td>{{ pago.Fecha_pago }}</td>
+                <td>{{ pago.Fecha_creacion }}</td>
+                <td>{{ pago.Progreso_pago }}</td>
+                <td>{{ pago.Cantidad_pagar }}</td>
+                <td>{{ pago.Estatus }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

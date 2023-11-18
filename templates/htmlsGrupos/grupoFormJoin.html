@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyFinance unirse</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+    <link rel="manifest" href="/static/img/site.webmanifest">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header class="hero" id="inicio">
+        <nav class="nav container">
+            <div class="nav_logo">
+                <h2 class="nav_title">PyFinance</h2>
+            </div>
+            <ul class="nav_link nav_link--menu">
+                
+                <li class="nav_items">
+                    <a href="{{url_for('grupoFormCreate')}}" class="nav_links">Crear un Grupo</a>
+                </li>
+                <li class="nav_items">
+                    <a href="{{url_for('gruposView')}}" class="nav_links"> Ver grupos</a>
+                </li>
+                <li class="nav_items">
+                    <a href="{{url_for('startPage')}}" class="cta">startPage</a>
+                </li>
+                <img src="/static/img/close.svg" alt="close" class="nav_close">
+            </ul>
+            <div class="nav_menu">
+                <img src="/static/img/menu.svg" alt="menu" class="nav_img">
+            </div>
+        </nav>
+    </header>
+    <main>
+        
+
+
+    </main>
+    <footer class="footer" id="contact">
+        <section class="footer_container container">
+            <nav class="nav nav--footer">
+                <h2 class="footer_title">PyFinance</h2>
+                <ul class="nav_link nav_link--footer">
+                    <li class="nav_items">
+                        <a href="#inicio" class="nav_links">Inicio</a>
+                    </li>
+                    <li class="nav_items">
+                        <a href="#about" class="nav_links">Acerca de nosotros</a>
+                    </li>
+                    <li class="nav_items">
+                        <a href="#ofer" class="nav_links">Ofrecemos</a>
+                    </li>
+                    <li class="nav_items">
+                        <a href="#contact" class="nav_links">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <section class="footer_copy container">
+            <div class="footer_social">
+                <a href="#" class="footer_icons"><img src="/static/img/gmail.svg" alt="logoGmail" class="footer_img"></a>
+                <a href="#" class="footer_icons"><img src="/static/img/whatsapp.svg" alt="logoWhatsapp" class="footer_img"></a>
+            </div>
+            <h3 class="footer_copyright">Derechos reservados &copy; TaquionTeam</h3>
+        </section>
+    </footer>
+    <script src="/static/js/menu.js"></script>
+</body>
+</html>

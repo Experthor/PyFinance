@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>startage</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+    <link rel="manifest" href="/static/img/site.webmanifest">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header class="hero" id="inicio">
+        <nav class="nav container">
+            <div class="nav_logo">
+                <h2 class="nav_title">PyFinance</h2>
+            </div>
+            <ul class="nav_link nav_link--menu">
+                <li class="nav_items">
+                    <a href="{{url_for('grupoFormJoin')}}" class="nav_links">Unirse a un Grupo </a>
+                </li>
+                <li class="nav_items">
+                    <a href="{{url_for('grupoFormCreate')}}" class="nav_links">Crear un Grupo</a>
+                </li>
+                <li class="nav_items">
+                    <a href="{{url_for('gruposView')}}" class="nav_links">Grupos</a>
+                </li>
+
+                <li class="nav_items">
+                    <a href="{{url_for('Logout')}}" class="cta">Cerrar Seccion</a>
+                </li>
+
+                <img src="/static/img/close.svg" alt="close" class="nav_close">
+            </ul>
+            <div class="nav_menu">
+                <img src="/static/img/menu.svg" alt="menu" class="nav_img">
+            </div>
+        </nav>
+        <section class="hero_container container">
+            <h1 class="hero_title">Bienvenido a PyFinance</h1>
+            <p class="hero_paragraph">Administra tu vida aqui</p>
+        </section>
+    </header>
+    <main>
+        <section class="container about" id="about">
+            <h2 class="subtitle">¿Que es PyFinance?</h2>
+            <p class="about_paragraph">PyFinance es una innovadora y completa plataforma en línea diseñada para hacer que la gestión financiera en tu hogar sea más sencilla y efectiva que nunca. Nuestra aplicación te permite tomar el control de tus finanzas de manera intuitiva y elegante, ya sea que vivas en familia o compartas gastos con compañeros de vivienda. El front-end de PyFinance esta desarrollado en HTML5 y CSS, y su back-end esta hecho entre JavaScript y Python</p>
+            <div class="about_main">
+                <article class="about_icons">
+                    <img src="/static/img/html5.svg" alt="html" class="about_icon">
+                    <h3 class="about_title">Disenado con HTML5, CSS y JS</h3>
+                    <p class="about_paragraph">
+                        Para tener una pagina ligera y que cumpla con los estandares de las paginas web, esta desarrollado con estas tecnologias
+                    </p>   
+                </article>
+                <article class="about_icons">
+                    <img src="/static/img/python.svg" alt="python" class="about_icon">
+                    <h3 class="about_title">Back-end con Python</h3>
+                    <p class="about_paragraph">
+                        Con Python se crea un codigo mucho mas ligero y sencillo de entender para todos.
+                    </p>   
+                </article>
+                <article class="about_icons">
+                    <img src="/static/img/postgresql.svg" alt="postgres" class="about_icon">
+                    <h3 class="about_title">Base de datos confiable</h3>
+                    <p class="about_paragraph">
+                        Todos los datos estan almacenados en una base de datos gratuita y confiable.
+                    </p>   
+                </article>
+            </div>
+        </section>
+        <section class="Ofrecemos" id="ofer">
+            <div class="Ofrecemos_container container">
+                <div class="Ofrecemos_texts">
+                    <h2 class="subtitle">Ten bajo control tus gastos</h2>
+                    <p class="Ofrecemos_paragraph">Ya no tendras que escribir en tu cuaderno para llevar a cabo la administracion de tu hogar ya sea solo o en conjunto con los demas miembros de tu hogar. </p><br>
+                    <p class="Ofrecemos_paragraph">
+                    </p>
+                    <a href="#" class="cta">Crea una cuenta</a>
+                </div>
+                <figure class="Ofrecemos_picture">
+                    <img src="/static/img/carr1.webp" class="Ofrecemos_img">
+                </figure>
+            </div>
+
+            <div class="Ofrecemos_main">
+                <article class="Ofrecemos_icons">
+                    <img src="/static/img/group.svg" alt="html" class="Ofrecemos_icon">
+                    <h3 class="Ofrecemos_title">Creacion de Grupos</h3>
+                    <p class="Ofrecemos_paragraph">
+                        Todos los mienros de tu hogar podran unirse a tu grupo para poder gestionar los pagos en equipo.
+                    </p>   
+                </article>
+                <article class="Ofrecemos_icons">
+                    <img src="/static/img/money.svg" alt="python" class="Ofrecemos_icon">
+                    <h3 class="Ofrecemos_title">Creacion de pagos</h3>
+                    <p class="Ofrecemos_paragraph">
+                        Para poder llevar un seguimiento de los pagos penmdientes en el hogar.
+                    </p>   
+                </article>
+                <article class="Ofrecemos_icons">
+                    <img src="/static/img/stats.svg" alt="postgres" class="Ofrecemos_icon">
+                    <h3 class="Ofrecemos_title">estadisticas</h3>
+                    <p class="Ofrecemos_paragraph">
+                        Tanto de los grupos como personales para que puedas mejorar cada dia.
+                    </p>   
+                </article>
+            </div>
+
+        </section>
+    </main>
+    <footer class="footer" id="contact">
+        <section class="footer_container container">
+            <nav class="nav nav--footer">
+                <h2 class="footer_title">PyFinance</h2>
+                <ul class="nav_link nav_link--footer">
+                    <li class="nav_items">
+                        <a href="#inicio" class="nav_links">Inicio</a>
+                    </li>
+                    <li class="nav_items">
+                        <a href="#about" class="nav_links">Acerca de nosotros</a>
+                    </li>
+                    <li class="nav_items">
+                        <a href="#ofer" class="nav_links">Ofrecemos</a>
+                    </li>
+                    <li class="nav_items">
+                        <a href="#contact" class="nav_links">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <section class="footer_copy container">
+            <div class="footer_social">
+                <a href="#" class="footer_icons"><img src="/static/img/gmail.svg" alt="logoGmail" class="footer_img"></a>
+                <a href="#" class="footer_icons"><img src="/static/img/whatsapp.svg" alt="logoWhatsapp" class="footer_img"></a>
+            </div>
+            <h3 class="footer_copyright">Derechos reservados &copy; TaquionTeam</h3>
+        </section>
+    </footer>
+    <script src="/static/js/menu.js"></script>
+</body>
+</html>

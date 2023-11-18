@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyFinance Login</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+    <link rel="manifest" href="/static/img/site.webmanifest">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <script>
+        /*function validacion(){
+
+            var Correo = document.getElementById('Correo').value;
+            var Contrasena = document.getElementById('Contrasena').value;
+
+
+            if ( Correo === '' || Contrasena === '') {
+                alert('Completa todos los campos obligatorios');
+            } else {
+                alert('esta bien todo');
+            }
+            }*/
+    </script>
+</head>
+<body>
+    <header class="hero_login">
+        <nav class="nav container">
+            <div class="nav_logo">
+                <h2 class="nav_title">PyFinance</h2>
+            </div>
+            <ul class="nav_link nav_link--menu">
+                <li class="nav_items">
+                    <a href="{{url_for('Home')}}" class="cta">Home</a>
+                </li>
+                <img src="/static/img/close.svg" alt="close" class="nav_close">
+            </ul>
+            <div class="nav_menu">
+                <img src="/static/img/menu.svg" alt="menu" class="nav_img">
+            </div>
+        </nav>
+        
+    </header>
+    <main>
+         <!--form para login-->
+         <form method="POST" action="/LogIn" class="form">
+            <h3 class="subtitle">Inicio se sesion</h3>
+            <p class="about_paragraph">Ingresa los datos que se te piden para que puedas acceder a todas las funciones</p>
+            {{form.hidden_tag()}}
+            <label>{{form.Correo.label}}
+                {{form.Correo(placeholder="Escribe tu Correo", id="Correo", class="inputText")}}
+            </label><br>
+            <label>{{form.Contrasena.label}}
+                {{form.Contrasena(placeholder="Escribe tu Contrasena", id="Contrasena", class="inputText")}}
+            </label><br>
+            {{form.submit()}}
+         </form>
+    </main>
+    <footer class="footer" id="contact">
+        <section class="footer_container container">
+            <nav class="nav nav--footer">
+                <h2 class="footer_title">PyFinance</h2>
+                <ul class="nav_link nav_link--footer">
+                    <li class="nav_items">
+                        <a href="#inicio" class="nav_links">Inicio</a>
+                    </li>
+                    <li class="nav_items">
+                        <a href="#about" class="nav_links">Acerca de nosotros</a>
+                    </li>
+                    <li class="nav_items">
+                        <a href="#ofer" class="nav_links">Ofrecemos</a>
+                    </li>
+                    <li class="nav_items">
+                        <a href="#contact" class="nav_links">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <section class="footer_copy container">
+            <div class="footer_social">
+                <a href="#" class="footer_icons"><img src="/static/img/gmail.svg" alt="logoGmail" class="footer_img"></a>
+                <a href="#" class="footer_icons"><img src="/static/img/whatsapp.svg" alt="logoWhatsapp" class="footer_img"></a>
+            </div>
+            <h3 class="footer_copyright">Derechos reservados &copy; TaquionTeam</h3>
+        </section>
+    </footer>
+    <script src="/static/js/menu.js"></script>
+
+</body>
+</html>
